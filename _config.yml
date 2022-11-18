@@ -1,0 +1,52 @@
+lsi: false
+safe: true
+incremental: false
+highlighter: 'rouge'
+encoding: 'UTF-8'
+
+# Outputting
+permalink: 'date'
+paginate_path: '/page:num'
+timezone: null
+excerpt_separator: '<!--more-->'
+
+exclude: 
+  - '_site' 
+  - '.github' 
+  - 'makefile' 
+
+gist:
+  noscript: false
+
+sass:
+  style: 'compressed'
+
+csv_reader:
+    converters:
+      - 'numeric'
+      - 'datetime'
+    headers: true
+    encoding: 'utf-8'
+
+liquid:
+  error_mode: 'warn'
+  strict_variables: true
+  strict_filters: true
+
+# Markdown Processors
+kramdown:
+  auto_ids: true
+  entity_output: 'as_char'
+  toc_levels: [1, 2, 3, 4, 5, 6]
+  smart_quotes: 'lsquo,rsquo,ldquo,rdquo'
+  input: 'GFM'
+  hard_wrap: false
+  footnote_nr: 1
+  show_warnings: false
+
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: 'post'
